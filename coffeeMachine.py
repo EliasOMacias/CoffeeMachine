@@ -1,5 +1,5 @@
 
-#todo 1: print report
+
 #todo 2: check resources on hand: milk, water, coffee
 #todo 3: process coins
 #todo 4: check transaction successfuL
