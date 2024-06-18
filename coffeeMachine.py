@@ -1,8 +1,8 @@
 
 
 
-#todo 4: check transaction successfuL
-#todo  5: deduct resources
+#todo  6: deduct resources
+#todo 7: make coinCounter more elegant. Stop asking for inputs once total is reached.
 
 MENU = {
     "espresso": {
@@ -31,7 +31,7 @@ MENU = {
 }
 
 resources = {
-    "water": 100,
+    "water": 500,
     "milk": 200,
     "coffee": 100,
 
@@ -47,7 +47,7 @@ def coffeeMachine():
         print(resources, f'Till: ${money}')
 
     elif prompt == 'espresso'.lower():
-        if MENU['espresso']['ingredients']['water'] > resources['water'] and MENU['espresso']['ingredients']['coffee'] >resources['coffee']:
+        if MENU['espresso']['ingredients']['water'] > resources['water'] and MENU['espresso']['ingredients']['coffee'] >= resources['coffee']:
             print('insufficient beans and coffee')
         elif MENU['espresso']['ingredients']['water'] > resources['water']:
             print("insufficient water")
@@ -55,6 +55,38 @@ def coffeeMachine():
             print('insufficient coffee')
         else:
             transactionValidator('espresso')
+
+    elif prompt == 'latte'.lower():
+        if MENU['latte']['ingredients']['water'] > resources['water'] and MENU['latte']['ingredients']['coffee'] >= resources['coffee']:
+                print('insufficient beans and coffee')
+        elif MENU['latte']['ingredients']['water'] > resources['water']:
+            print("insufficient water")
+        elif MENU['latte']['ingredients']['coffee'] > resources['coffee']:
+            print('insufficient coffee')
+        elif MENU['latte']['ingredients']['milk'] > resources['milk']:
+            print('insufficient milk')
+        else:
+            transactionValidator('latte')
+
+    elif prompt == 'cappuccino'.lower():
+        if MENU['cappuccino']['ingredients']['water'] > resources['water'] and MENU['cappuccino']['ingredients']['coffee'] >= resources['coffee']:
+            print('insufficient beans and coffee')
+        elif MENU['cappuccino']['ingredients']['water'] > resources['water']:
+            print("insufficient water")
+        elif MENU['cappuccino']['ingredients']['coffee'] > resources['coffee']:
+            print('insufficient coffee')
+        elif MENU['cappuccino']['ingredients']['milk'] > resources['milk']:
+            print('insufficient milk')
+        else:
+            transactionValidator('cappuccino')
+
+    orderAgain = input('Would you like another drink?\n Yes or no?')
+
+    if orderAgain == 'yes'.lower():
+        coffeeMachine()
+    else:
+        print('Thank you pharoah')
+
 
 
 #coffeeMachine()
@@ -73,19 +105,43 @@ def coinCounter():
     pennies = int(input('How many pennies\n'))
     total += (0.01 * pennies)
 
-    return(total)
+    return total
+
+
 
 def transactionValidator(item):
+    total = 0.0
     itemCost = MENU[item]['cost']
     print(f'the total is: {itemCost}')
-    total = coinCounter()
 
-    itemCost = MENU[item]['cost']
 
-    if itemCost > total:
-        print('insufficient funds')
-    elif itemCost <= total:
-        print(f'thank you!, here is your {item}')
+
+    while total < itemCost:
+        quarters = int(input('How many quarters?\n'))
+        total += (0.25 * quarters)
+        if total >= itemCost:
+            break
+
+        dimes = int(input('How many dimes?\n'))
+        total += (0.10 * dimes)
+        if total >= itemCost:
+            break
+
+        nickels = int(input('How many nickels\n'))
+        total += (0.05 * nickels)
+        if total >= itemCost:
+            break
+
+        pennies = int(input('How many pennies\n'))
+        total += (0.01 * pennies)
+
+
+    if total == itemCost:
+        print(f'Thank you! Here is your {item}')
+    elif total > itemCost:
+        print(f'Thank you! your change is ${total - itemCost}')
+    else:
+        print('insufficient funds broke boy')
 
 
 
