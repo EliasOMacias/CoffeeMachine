@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da8cef62-19e9-4460-a8d4-bf1d465eb862" name="Changes" comment="Todo 2 and 3 Complete.&#10;- can count coin input &#10;- can check resources on hand">
+    <list default="true" id="da8cef62-19e9-4460-a8d4-bf1d465eb862" name="Changes" comment="Todo 4, 5 and 7 complete.&#10;- coin cointer now stops when total is reached.&#10;- after completing beverage order user is asked if they want another beverage or not. &#10;- wrote code for processing each type of beverage order">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coffeeMachine.py" beforeDir="false" afterPath="$PROJECT_DIR$/coffeeMachine.py" afterDir="false" />
     </list>
@@ -91,7 +91,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718735963118</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Todo 4, 5 and 7 complete.&#10;- coin cointer now stops when total is reached.&#10;- after completing beverage order user is asked if they want another beverage or not. &#10;- wrote code for processing each type of beverage order">
+      <option name="closed" value="true" />
+      <created>1718737858117</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718737858117</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -109,6 +117,28 @@
     <MESSAGE value="- created Menu dictionary&#10;- created transactionValidator function&#10;- created coinCounter function" />
     <MESSAGE value="- todo 1 complete. Report printable" />
     <MESSAGE value="Todo 2 and 3 Complete.&#10;- can count coin input &#10;- can check resources on hand" />
-    <option name="LAST_COMMIT_MESSAGE" value="Todo 2 and 3 Complete.&#10;- can count coin input &#10;- can check resources on hand" />
+    <MESSAGE value="Todo 4, 5 and 7 complete.&#10;- coin cointer now stops when total is reached.&#10;- after completing beverage order user is asked if they want another beverage or not. &#10;- wrote code for processing each type of beverage order" />
+    <option name="LAST_COMMIT_MESSAGE" value="Todo 4, 5 and 7 complete.&#10;- coin cointer now stops when total is reached.&#10;- after completing beverage order user is asked if they want another beverage or not. &#10;- wrote code for processing each type of beverage order" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/coffeeMachine.py</url>
+          <line>93</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/coffeeMachine.py</url>
+          <line>92</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/coffeeMachine.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -2,7 +2,7 @@
 
 
 #todo  6: deduct resources
-#todo 7: make coinCounter more elegant. Stop asking for inputs once total is reached.
+
 
 MENU = {
     "espresso": {
@@ -37,7 +37,7 @@ resources = {
 
 }
 
-money = 0
+global till = 0
 
 def coffeeMachine():
 
@@ -119,20 +119,24 @@ def transactionValidator(item):
     while total < itemCost:
         quarters = int(input('How many quarters?\n'))
         total += (0.25 * quarters)
+        till += (0.25 * quarters)
         if total >= itemCost:
             break
 
-        dimes = int(input('How many dimes?\n'))
+        dimes = int(input(f'total: ${total}. How many dimes?\n'))
         total += (0.10 * dimes)
+        till += (0.25 * dimes)
         if total >= itemCost:
             break
 
-        nickels = int(input('How many nickels\n'))
+        nickels = int(input(f'total:$  {total}How many nickels\n'))
         total += (0.05 * nickels)
+        till += (0.05 * nickels)
         if total >= itemCost:
             break
 
         pennies = int(input('How many pennies\n'))
+        till += (0.01 * pennies)
         total += (0.01 * pennies)
 
 
