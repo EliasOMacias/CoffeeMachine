@@ -99,7 +99,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718737858117</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Todo 4, 5 and 7 complete.&#10;- coin cointer now stops when total is reached.&#10;- after completing beverage order user is asked if they want another beverage or not. &#10;- wrote code for processing each type of beverage order">
+      <option name="closed" value="true" />
+      <created>1719169004851</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719169004851</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -125,13 +133,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/coffeeMachine.py</url>
-          <line>93</line>
+          <line>95</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/coffeeMachine.py</url>
-          <line>92</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/coffeeMachine.py</url>

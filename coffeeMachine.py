@@ -37,14 +37,14 @@ resources = {
 
 }
 
-global till = 0
+till = 0
 
 def coffeeMachine():
 
     prompt = input('What would you like?\n')
 
     if prompt == 'report'.lower():
-        print(resources, f'Till: ${money}')
+        print(resources, f'Till: ${till}')
 
     elif prompt == 'espresso'.lower():
         if MENU['espresso']['ingredients']['water'] > resources['water'] and MENU['espresso']['ingredients']['coffee'] >= resources['coffee']:
@@ -55,6 +55,9 @@ def coffeeMachine():
             print('insufficient coffee')
         else:
             transactionValidator('espresso')
+            resources['water'] -= MENU['espresso']['ingredients']['water']
+            resources['coffee'] -= MENU['espresso']['ingredients']['coffee']
+
 
     elif prompt == 'latte'.lower():
         if MENU['latte']['ingredients']['water'] > resources['water'] and MENU['latte']['ingredients']['coffee'] >= resources['coffee']:
@@ -67,6 +70,11 @@ def coffeeMachine():
             print('insufficient milk')
         else:
             transactionValidator('latte')
+            resources['water'] -= MENU['latte']['ingredients']['water']
+            resources['milk'] -= MENU['latte']['ingredients']['milk']
+            resources['coffee'] -= MENU['latte']['ingredients']['coffee']
+
+
 
     elif prompt == 'cappuccino'.lower():
         if MENU['cappuccino']['ingredients']['water'] > resources['water'] and MENU['cappuccino']['ingredients']['coffee'] >= resources['coffee']:
@@ -79,8 +87,11 @@ def coffeeMachine():
             print('insufficient milk')
         else:
             transactionValidator('cappuccino')
+            resources['water'] -= MENU['cappuccino']['ingredients']['water']
+            resources['milk'] -= MENU['cappuccino']['ingredients']['milk']
+            resources['coffee'] -= MENU['cappuccino']['ingredients']['coffee']
 
-    orderAgain = input('Would you like another drink?\n Yes or no?')
+    orderAgain = input('Would you like another drink?\n Yes or no?\n')
 
     if orderAgain == 'yes'.lower():
         coffeeMachine()
@@ -91,7 +102,7 @@ def coffeeMachine():
 
 #coffeeMachine()
 def coinCounter():
-    total = 0.0
+
 
     quarters = int(input('How many quarters?\n'))
     total += (0.25 * quarters)
@@ -111,6 +122,8 @@ def coinCounter():
 
 def transactionValidator(item):
     total = 0.0
+    global till
+    till = 0
     itemCost = MENU[item]['cost']
     print(f'the total is: {itemCost}')
 
