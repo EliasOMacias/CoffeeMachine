@@ -101,22 +101,7 @@ def coffeeMachine():
 
 
 #coffeeMachine()
-def coinCounter():
 
-
-    quarters = int(input('How many quarters?\n'))
-    total += (0.25 * quarters)
-
-    dimes = int(input('How many dimes?\n'))
-    total += (0.10 * dimes)
-
-    nickels = int(input('How many nickels\n'))
-    total += (0.05 * nickels)
-
-    pennies = int(input('How many pennies\n'))
-    total += (0.01 * pennies)
-
-    return total
 
 
 

@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da8cef62-19e9-4460-a8d4-bf1d465eb862" name="Changes" comment="Todo 4, 5 and 7 complete.&#10;- coin cointer now stops when total is reached.&#10;- after completing beverage order user is asked if they want another beverage or not. &#10;- wrote code for processing each type of beverage order">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coffeeMachine.py" beforeDir="false" afterPath="$PROJECT_DIR$/coffeeMachine.py" afterDir="false" />
-    </list>
+    <list default="true" id="da8cef62-19e9-4460-a8d4-bf1d465eb862" name="Changes" comment="updated code so resources are deducted when a drink is made" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,7 +104,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719169004851</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="updated code so resources are deducted when a drink is made">
+      <option name="closed" value="true" />
+      <created>1719170111388</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719170111388</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,14 +131,15 @@
     <MESSAGE value="- todo 1 complete. Report printable" />
     <MESSAGE value="Todo 2 and 3 Complete.&#10;- can count coin input &#10;- can check resources on hand" />
     <MESSAGE value="Todo 4, 5 and 7 complete.&#10;- coin cointer now stops when total is reached.&#10;- after completing beverage order user is asked if they want another beverage or not. &#10;- wrote code for processing each type of beverage order" />
-    <option name="LAST_COMMIT_MESSAGE" value="Todo 4, 5 and 7 complete.&#10;- coin cointer now stops when total is reached.&#10;- after completing beverage order user is asked if they want another beverage or not. &#10;- wrote code for processing each type of beverage order" />
+    <MESSAGE value="updated code so resources are deducted when a drink is made" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated code so resources are deducted when a drink is made" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/coffeeMachine.py</url>
-          <line>95</line>
+          <line>104</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
